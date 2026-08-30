@@ -1,0 +1,16 @@
+class Solution {
+    public int[] shuffle(int[] nums, int n) {
+        int ans[]=new int[2*n];
+        int k=0;
+        //j points to second half
+        int j=n;
+        for(int i=0;i<n;i++){
+            ans[k]=nums[i];
+            k++;
+            ans[k]=nums[j];
+            j++;
+            k++;
+        }
+        return ans;
+    }
+}
